@@ -4,8 +4,26 @@ export class Teacher {
         name,
         speciality,
     }) {
-        this.id = id;
-        this.name = name;
+        this._id = id;
+        this._name = name;
         this.speciality = speciality;
     }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(newName){
+        this._name = newName;
+    }
+
+
+    get id(){
+        return this._id;
+    }
+
+    set id(newId){
+        this._id = newId;
+    }
+
 };
