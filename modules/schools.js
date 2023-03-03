@@ -1,4 +1,4 @@
-export default class LearningPath {
+export class LearningPath {
   constructor({
     id,
     title,

@@ -1,4 +1,4 @@
-export default class Student {
+export class Student {
     constructor({
         id,
         name,

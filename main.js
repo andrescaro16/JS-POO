@@ -1,8 +1,8 @@
-import Teacher from './teachers.js'
-import Course from './courses.js'
-import Lesson from './lessons.js'
-import LearningPath from './schools.js'
-import Student from './students.js'
+import {Teacher} from './modules/teachers.js'
+import {Course} from './modules/courses.js'
+import {Lesson} from './modules/lessons.js'
+import {LearningPath} from './modules/schools.js'
+import {Student} from './modules/students.js'
 
 
 // -------------------- Teachers ---------------------
@@ -12,6 +12,7 @@ const FreddyVega = new Teacher({
   speciality: 'CEO',
 });
 console.log(FreddyVega);
+window.FreddyVega = FreddyVega;
 
 const ClauAlderete = new Teacher({
   id: 2,
@@ -19,6 +20,7 @@ const ClauAlderete = new Teacher({
   speciality: 'Digital Marketing',
 });
 console.log(ClauAlderete);
+window.ClauAlderete = ClauAlderete;
 
 
 // ------------------- Lecciones ----------------------
@@ -27,12 +29,14 @@ const lesson1PB = new Lesson({
   title: 'Clase 1 Programación Básica',
 });
 console.log(lesson1PB);
+window.lesson1PB = lesson1PB;
 
 const lesson1DM = new Lesson({
   id: 2,
   title: 'Clase 1 Marketing Digital',
 });
 console.log(lesson1DM);
+window.lesson1DM = lesson1DM;
 
 
 // ------------------- Cursos ----------------------------
@@ -43,6 +47,7 @@ const cursoProgramacionBasica = new Course({
   teacher: FreddyVega,
 });
 console.log(cursoProgramacionBasica);
+window.cursoProgramacionBasica = cursoProgramacionBasica;
 
 const cursoIntroMarketingDigital = new Course({
   id: 2,
@@ -51,6 +56,7 @@ const cursoIntroMarketingDigital = new Course({
   teacher: ClauAlderete
 });
 console.log(cursoIntroMarketingDigital);
+window.cursoIntroMarketingDigital = cursoIntroMarketingDigital;
 
 
 // ------------------- Escuelas ----------------------------
@@ -60,6 +66,7 @@ const escuelaDesarrolloWeb = new LearningPath({
   courses: [cursoProgramacionBasica],
 });
 console.log(escuelaDesarrolloWeb);
+window.escuelaDesarrolloWeb = escuelaDesarrolloWeb;
 
 const escuelaMarketingDigital = new LearningPath({
   id: 2,
@@ -67,6 +74,7 @@ const escuelaMarketingDigital = new LearningPath({
   courses: [cursoIntroMarketingDigital],
 });
 console.log(escuelaMarketingDigital);
+window.escuelaMarketingDigital = escuelaMarketingDigital;
 
 
 // ------------------- Estudiantes ----------------------------
@@ -80,6 +88,7 @@ const miguel = new Student({
   learningPaths: [escuelaDesarrolloWeb]
 });
 console.log(miguel);
+window.miguel = miguel;
 
 
 
