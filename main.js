@@ -1,8 +1,8 @@
-import {Teacher} from './modules/teachers.js'
-import {Course} from './modules/courses.js'
-import {Lesson} from './modules/lessons.js'
-import {LearningPath} from './modules/schools.js'
-import {Student} from './modules/students.js'
+import {Teacher} from './modules/teachers.mjs'
+import {Course} from './modules/courses.mjs'
+import {Lesson} from './modules/lessons.mjs'
+import {LearningPath} from './modules/schools.mjs'
+import {Student} from './modules/students.mjs'
 
 
 // -------------------- Teachers ---------------------
@@ -11,7 +11,6 @@ const FreddyVega = new Teacher({
   name: 'Freddy Vega',
   speciality: 'CEO',
 });
-console.log(FreddyVega);
 window.FreddyVega = FreddyVega;
 
 const ClauAlderete = new Teacher({
@@ -19,7 +18,6 @@ const ClauAlderete = new Teacher({
   name: 'Clau Alderete',
   speciality: 'Digital Marketing',
 });
-console.log(ClauAlderete);
 window.ClauAlderete = ClauAlderete;
 
 
@@ -27,15 +25,19 @@ window.ClauAlderete = ClauAlderete;
 const lesson1PB = new Lesson({
   id: 1,
   title: 'Clase 1 Programación Básica',
+  videoId: "mdkjskjamnjknskmlcs.,csmla#4"
 });
-console.log(lesson1PB);
+lesson1PB.playLesson();
+lesson1PB.pauseLesson();
 window.lesson1PB = lesson1PB;
 
 const lesson1DM = new Lesson({
   id: 2,
   title: 'Clase 1 Marketing Digital',
+  videoId: "sjkenfeotijcnjknm,zxkjswnrf"
 });
-console.log(lesson1DM);
+lesson1DM.playLesson();
+lesson1DM.pauseLesson();
 window.lesson1DM = lesson1DM;
 
 
@@ -46,7 +48,6 @@ const cursoProgramacionBasica = new Course({
   classes: [lesson1PB],
   teacher: FreddyVega,
 });
-console.log(cursoProgramacionBasica);
 window.cursoProgramacionBasica = cursoProgramacionBasica;
 
 const cursoIntroMarketingDigital = new Course({
@@ -55,7 +56,6 @@ const cursoIntroMarketingDigital = new Course({
   classes: [lesson1DM],
   teacher: ClauAlderete
 });
-console.log(cursoIntroMarketingDigital);
 window.cursoIntroMarketingDigital = cursoIntroMarketingDigital;
 
 
@@ -65,7 +65,6 @@ const escuelaDesarrolloWeb = new LearningPath({
   title: 'Escuela de Desarrollo Web',
   courses: [cursoProgramacionBasica],
 });
-console.log(escuelaDesarrolloWeb);
 window.escuelaDesarrolloWeb = escuelaDesarrolloWeb;
 
 const escuelaMarketingDigital = new LearningPath({
@@ -73,7 +72,6 @@ const escuelaMarketingDigital = new LearningPath({
   title: 'Marketing Digital',
   courses: [cursoIntroMarketingDigital],
 });
-console.log(escuelaMarketingDigital);
 window.escuelaMarketingDigital = escuelaMarketingDigital;
 
 
@@ -87,7 +85,6 @@ const miguel = new Student({
   approvedCourses: [cursoProgramacionBasica],
   learningPaths: [escuelaDesarrolloWeb]
 });
-console.log(miguel);
 window.miguel = miguel;
 
 
