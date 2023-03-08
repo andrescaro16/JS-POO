@@ -4,11 +4,15 @@ export class Course {
         name,
         classes = [],
         teacher,
+        isFree = false,
+        lang = "spanish",
     }){
         this._id = id;
         this._name = name;
         this._classes = classes;
         this._teacher = teacher;
+        this._isFree = isFree;
+        this._lang = lang;
     };
 
     get id(){
@@ -41,5 +45,21 @@ export class Course {
 
     set teacher(newTeacher){
         this._teacher = newTeacher;
+    }
+
+    get isFree(){
+        return this._isFree;
+    }
+
+    set isFree(newFree){
+        this._isFree = newFree;
+    }
+
+    get lang(){
+        return this._lang;
+    }
+
+    set lang(newLang){
+        this._lang = newLang;
     }
 };

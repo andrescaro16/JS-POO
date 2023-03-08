@@ -75,3 +75,41 @@ export class Student {
     }
 
 };
+
+
+export class freeStudent extends Student{
+    constructor(props){
+        super(props);
+    }
+    approveCourse(newCourse){
+        if (newCourse.isFree) {
+            this._approvedCourses.push(newCourse);
+        }else{
+            console.warn("Lo sentimos " + this.name + ", solo puedes acceder a cursos abiertos")
+        }
+    }
+}
+
+
+export class basicStudent extends Student{
+    constructor(props){
+        super(props);
+    }
+    approveCourse(newCourse){
+        if (newCourse.lang !== "english") {
+            this._approvedCourses.push(newCourse);
+        }else{
+            console.warn("Lo sentimos " + this.name + ", no puedes acceder a cursos en inglés")
+        }
+    }
+}
+
+
+export class expertStudent extends Student{
+    constructor(props){
+        super(props);
+    }
+    approveCourse(newCourse){
+        this._approvedCourses.push(newCourse);
+    }
+}
