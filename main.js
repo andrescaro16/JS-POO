@@ -1,8 +1,8 @@
 import {Teacher} from './modules/teachers.mjs'
 import {Course} from './modules/courses.mjs'
-import {Lesson} from './modules/lessons.mjs'
+import {Lesson, Comment} from './modules/lessons.mjs'
 import {LearningPath} from './modules/schools.mjs'
-import {Student, freeStudent, basicStudent, expertStudent} from './modules/students.mjs'
+import {Student, freeStudent, basicStudent, expertStudent, TeacherStudent} from './modules/students.mjs'
 
 
 // -------------------- Teachers ---------------------
@@ -19,6 +19,14 @@ const ClauAlderete = new Teacher({
   speciality: 'Digital Marketing',
 });
 window.ClauAlderete = ClauAlderete;
+
+const freddy = new TeacherStudent({
+  name: "Freddy Vega",
+  username: "freddier",
+  email: "f@gep.com",
+  instagram: "freddiervega",
+});
+window.freddy = freddy;
 
 
 // ------------------- Lecciones ----------------------
